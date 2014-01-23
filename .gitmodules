@@ -1,0 +1,3 @@
+[submodule "FConvenience"]
+	path = FConvenience
+	url = https://github.com/fjolnir/FConvenience.git
