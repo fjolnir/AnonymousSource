@@ -53,6 +53,8 @@
 
 - (void)viewWillAppear:(BOOL const)aAnimated
 {
+    [super viewWillAppear:aAnimated];
+    
     if(self.interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown)
         _screenshotView.transform = CGAffineTransformMakeRotation(M_PI);
     else if(self.interfaceOrientation == UIInterfaceOrientationLandscapeLeft)
@@ -85,8 +87,6 @@
 - (NSUInteger)supportedInterfaceOrientations
 {
     return UIInterfaceOrientationMaskAll;
-    return 1 << self.interfaceOrientation;
-    return UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationMaskPortraitUpsideDown;
 }
 
 - (IBAction)selectTool:(UISegmentedControl * const)aSender

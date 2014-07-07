@@ -9,13 +9,13 @@
 @end
 
 @interface ASAnnotationViewController : UIViewController
-@property(weak) id<ASAnnotationViewControllerDelegate> delegate;
+@property(nonatomic, weak) id<ASAnnotationViewControllerDelegate> delegate;
 
-@property(nonatomic)       UIImage *screenshot;
-@property(readonly)        UIImage *annotatedScreenshot;
+@property(nonatomic)           UIImage *screenshot;
+@property(nonatomic, readonly) UIImage *annotatedScreenshot;
 
-@property(weak) IBOutlet UIImageView *screenshotView;
-@property(weak) IBOutlet UISegmentedControl *toolSelector;
+@property(nonatomic, weak) IBOutlet UIImageView *screenshotView;
+@property(nonatomic, weak) IBOutlet UISegmentedControl *toolSelector;
 
 - (IBAction)selectTool:(UISegmentedControl *)aSender;
 - (IBAction)cancel:(id)aSender;

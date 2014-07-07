@@ -23,7 +23,7 @@
 } while(0)
 
 @interface ASReporter : NSObject
-@property(copy) NSString *email;
+@property(nonatomic, copy) NSString *email;
 
 + (instancetype)sharedReporter;
 
