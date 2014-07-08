@@ -28,7 +28,7 @@
 + (instancetype)sharedReporter;
 
 + (instancetype)new  __attribute__((unavailable("+new not available; use +sharedReporter")));
-- (id)init           __attribute__((unavailable("-init not available; use +sharedReporter")));
+- (instancetype)init __attribute__((unavailable("-init not available; use +sharedReporter")));
 
 + (void)prepare;
 + (void)setEmail:(NSString *)aEmail;

@@ -41,7 +41,7 @@ althoughSwizzlingAndOverridingPrivateMethodsIsFun:(id)c
     [[self sharedReporter] setEmail:aEmail];
 }
 
-- (id)init
+- (instancetype)init
 {
     if((self = [super init]))
         _logMessages = [NSMutableArray new];

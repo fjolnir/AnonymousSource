@@ -28,7 +28,7 @@
 @implementation ASAnnotationViewController
 @dynamic annotatedScreenshot;
 
-- (id)init
+- (instancetype)init
 {
     return [self initWithNibName:NSStringFromClass([self class]) bundle:Bundle];
 }
