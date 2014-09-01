@@ -39,7 +39,7 @@
     [super viewDidLoad];
     _screenshotView.image = _screenshot;
 
-    [_toolSelector setTitleTextAttributes:@{ UITextAttributeFont: [UIFont fontWithName:@"Apple Color Emoji"
+    [_toolSelector setTitleTextAttributes:@{ NSFontAttributeName: [UIFont fontWithName:@"Apple Color Emoji"
                                                                                   size:17] }
                                  forState:UIControlStateNormal];
     
