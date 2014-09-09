@@ -152,14 +152,14 @@ althoughSwizzlingAndOverridingPrivateMethodsIsFun:(id)c
     
     aslmsg msg;
     aslresponse const response = asl_search(NULL, query);
-    while((msg = aslresponse_next(response))) {
+    while((msg = asl_next(response))) {
         [_logMessages addObject:@{ @(ASL_KEY_MSG_ID): @(asl_get(msg, ASL_KEY_MSG_ID)),
                                    @(ASL_KEY_MSG):    @(asl_get(msg, ASL_KEY_MSG)),
                                    @(ASL_KEY_TIME):   @(asl_get(msg, ASL_KEY_TIME)) }];
     }
     
-    aslresponse_free(response);
-    asl_free(query);
+    asl_release(response);
+    asl_release(query);
 }
 
 - (void)_neverCalled
