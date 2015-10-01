@@ -84,7 +84,7 @@
     return NO;
 }
 
-- (NSUInteger)supportedInterfaceOrientations
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
     return UIInterfaceOrientationMaskAll;
 }
@@ -290,7 +290,7 @@
 {
     return self.visibleViewController.shouldAutorotate;
 }
-- (NSUInteger)supportedInterfaceOrientations
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
     return self.visibleViewController.supportedInterfaceOrientations;
 }
